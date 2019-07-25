@@ -1,0 +1,223 @@
+:root {
+  --primary-color: sandybrown;
+  --sidebar-color: seashell;
+  --bg-color: #e8e8e8;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e8e8e8;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  -webkit-animation: popup 0.5s ease-out;
+          animation: popup 0.5s ease-out;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+  -webkit-transition: all ease-out;
+  transition: all ease-out;
+}
+
+li:hover {
+  font-weight: 700;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes popup {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  overflow: hidden;
+  background-color: seashell;
+  text-align: center;
+  -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+aside.hide {
+  padding: 0;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  width: 0;
+}
+
+aside h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+aside ul {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+aside ul li {
+  padding: 2rem 0;
+}
+
+aside ul li.active {
+  background-color: #f9eae0;
+}
+
+header {
+  position: relative;
+  background-color: sandybrown;
+  height: 100vh;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header nav.navbar {
+  position: relative;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+}
+
+header nav.navbar .menu {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+header nav.navbar ul {
+  list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  header nav.navbar ul {
+    display: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider .slick-slide {
+  outline: none;
+}
+
+.slider .content-1 {
+  height: 100vh;
+  width: 100%;
+  padding: 0rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-size: cover;
+}
+
+.slider .content-1 h1 {
+  font-size: 4rem;
+  font-family: 'Bungee', sans-serif;
+}
+
+.slider .content-1 p {
+  font-size: 1.5rem;
+  margin-top: -2.8rem;
+  letter-spacing: 0.28rem;
+  word-spacing: 0.2rem;
+}
+/*# sourceMappingURL=main.css.map */
